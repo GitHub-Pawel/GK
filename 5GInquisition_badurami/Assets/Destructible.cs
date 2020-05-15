@@ -1,29 +1,37 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Destructible : MonoBehaviour
 {
+
+    
     public GameObject destroyedVersion;
+    private GameObject clone;
 
-    void OnMouseDown()
+    void Punch()
     {
-        if (destroyedVersion)
+        var rb = gameObject.GetComponent<Rigidbody>();
+        if (rb != null)
         {
-            Debug.Log("Destructible Script Used");
-            Destroy(gameObject);
-            var transformInfo = gameObject.transform;
-            Instantiate(destroyedVersion, transformInfo.position, transformInfo.rotation);
-
-        }
-        else
-        {
-            Debug.Log("Destructible Script Used On Pieces");
-            var rb = GetComponent<Rigidbody>();
-            rb.AddForce(Camera.main.transform.forward*100, ForceMode.Impulse);
+            Debug.Log("Punching!");
+            rb.AddForce(Camera.main.transform.forward * 69, ForceMode.Impulse);
         }
     }
-    
-  
-   
+    private void OnMouseDown()
+    {
+        
+        Punch();
+        
+        if(destroyedVersion)
+        {
+            Debug.Log("Destroying!");
+            var transformInfo = gameObject.transform;
+            clone = Instantiate(destroyedVersion, transformInfo.position, transformInfo.rotation);
+            Destroy(gameObject);
+            Punch();
+        }
+        
+    }
 }
