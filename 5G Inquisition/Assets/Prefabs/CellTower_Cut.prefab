@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 1830665587846151073}
   - component: {fileID: 2071074840501199416}
   - component: {fileID: 916351793445650397}
+  - component: {fileID: 7555366918896225355}
   m_Layer: 0
   m_Name: CellTower_base
   m_TagString: Untagged
@@ -102,9 +103,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8387415443376073318, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: 2661899577372516108, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: -7805965318761107941, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: 944a18181b30c124195794c43a95f1ac, type: 2}
+  - {fileID: 2100000, guid: cde5ef551d4963d44ab15c9a2e23c14f, type: 2}
+  - {fileID: 2100000, guid: e6e49bc801525014d9e75d3d5960b0eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -168,6 +169,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &7555366918896225355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698996404527017506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &3799260989596835516
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +197,7 @@ GameObject:
   - component: {fileID: 1620581520532397640}
   - component: {fileID: 6328513710089921063}
   - component: {fileID: 264486064676318607}
+  - component: {fileID: 7876619247372686139}
   m_Layer: 0
   m_Name: CellTower_segment5
   m_TagString: Untagged
@@ -229,9 +245,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4866765140763631827, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: -8387415443376073318, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: 2661899577372516108, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: a3f870d1be8ca614ea81c3ce3e383ae8, type: 2}
+  - {fileID: 2100000, guid: 944a18181b30c124195794c43a95f1ac, type: 2}
+  - {fileID: 2100000, guid: cde5ef551d4963d44ab15c9a2e23c14f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -295,6 +311,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &7876619247372686139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3799260989596835516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &4010991718857124888
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +339,7 @@ GameObject:
   - component: {fileID: 5394318266919571279}
   - component: {fileID: 8524449875134859068}
   - component: {fileID: 1171855748126617576}
+  - component: {fileID: 1804386869312336593}
   m_Layer: 0
   m_Name: CellTower_segment3
   m_TagString: Untagged
@@ -356,9 +387,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4866765140763631827, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: -8387415443376073318, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: 2661899577372516108, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: a3f870d1be8ca614ea81c3ce3e383ae8, type: 2}
+  - {fileID: 2100000, guid: 944a18181b30c124195794c43a95f1ac, type: 2}
+  - {fileID: 2100000, guid: cde5ef551d4963d44ab15c9a2e23c14f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -422,6 +453,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &1804386869312336593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010991718857124888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &5253248000653670097
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +481,7 @@ GameObject:
   - component: {fileID: 1309506637057326662}
   - component: {fileID: 2062302852405715357}
   - component: {fileID: 8672863456394236255}
+  - component: {fileID: 3219165640630381715}
   m_Layer: 0
   m_Name: CellTower_antenna1
   m_TagString: Untagged
@@ -483,7 +529,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1995354992942204500, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: b2a68df9ff0262147a8876bc3328ced4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -547,6 +593,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &3219165640630381715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5253248000653670097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &6475888617595450266
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +621,7 @@ GameObject:
   - component: {fileID: 3819085217738122481}
   - component: {fileID: 8315611087725205923}
   - component: {fileID: 6589575044409173605}
+  - component: {fileID: 1943722832797357278}
   m_Layer: 0
   m_Name: CellTower_antenna2
   m_TagString: Untagged
@@ -608,7 +669,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1995354992942204500, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: b2a68df9ff0262147a8876bc3328ced4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -672,6 +733,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &1943722832797357278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475888617595450266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &6600027531356055395
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +761,7 @@ GameObject:
   - component: {fileID: 8038667965284899833}
   - component: {fileID: 4275557425055544185}
   - component: {fileID: 6201297016619153004}
+  - component: {fileID: 3179141519635374581}
   m_Layer: 0
   m_Name: CellTower_metalBar1
   m_TagString: Untagged
@@ -798,6 +874,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &3179141519635374581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600027531356055395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &7346785654206710325
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +902,7 @@ GameObject:
   - component: {fileID: 766766840371715247}
   - component: {fileID: 8325573029942360185}
   - component: {fileID: 8328314777563817491}
+  - component: {fileID: 1393253880007859156}
   m_Layer: 0
   m_Name: CellTower_segment4
   m_TagString: Untagged
@@ -859,10 +950,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4866765140763631827, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: -1754306146357209115, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: -8387415443376073318, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: -1995354992942204500, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: a3f870d1be8ca614ea81c3ce3e383ae8, type: 2}
+  - {fileID: 2100000, guid: b23206df4104c3145988345a15b06da2, type: 2}
+  - {fileID: 2100000, guid: 944a18181b30c124195794c43a95f1ac, type: 2}
+  - {fileID: 2100000, guid: b2a68df9ff0262147a8876bc3328ced4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -926,6 +1017,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &1393253880007859156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346785654206710325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &7787069695455492910
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +1045,7 @@ GameObject:
   - component: {fileID: 5449516332485956557}
   - component: {fileID: 7410661283500743372}
   - component: {fileID: 5058440150287883828}
+  - component: {fileID: 6479720214579554379}
   m_Layer: 0
   m_Name: CellTower_segment2
   m_TagString: Untagged
@@ -987,9 +1093,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8387415443376073318, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: 2661899577372516108, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: 4866765140763631827, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: 944a18181b30c124195794c43a95f1ac, type: 2}
+  - {fileID: 2100000, guid: cde5ef551d4963d44ab15c9a2e23c14f, type: 2}
+  - {fileID: 2100000, guid: a3f870d1be8ca614ea81c3ce3e383ae8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1053,6 +1159,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &6479720214579554379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787069695455492910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &8324678421732353326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1187,7 @@ GameObject:
   - component: {fileID: 7034802355155365169}
   - component: {fileID: 778469463267411929}
   - component: {fileID: 6256865009538421277}
+  - component: {fileID: 1398180869742492820}
   m_Layer: 0
   m_Name: CellTower_metalBar2
   m_TagString: Untagged
@@ -1179,6 +1300,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &1398180869742492820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324678421732353326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &8407109013204066763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1328,7 @@ GameObject:
   - component: {fileID: 4218195758941792322}
   - component: {fileID: 5875818875970544888}
   - component: {fileID: 609997589217429031}
+  - component: {fileID: 8387190239946145085}
   m_Layer: 0
   m_Name: CellTower_antenna3
   m_TagString: Untagged
@@ -1240,7 +1376,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1995354992942204500, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: b2a68df9ff0262147a8876bc3328ced4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1304,6 +1440,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &8387190239946145085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8407109013204066763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &8641461322268596285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1468,7 @@ GameObject:
   - component: {fileID: 6518147284451022457}
   - component: {fileID: 1876775346770927395}
   - component: {fileID: 655575439995723687}
+  - component: {fileID: 5969632760253210364}
   m_Layer: 0
   m_Name: CellTower_segment1
   m_TagString: Untagged
@@ -1365,9 +1516,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8387415443376073318, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: 2661899577372516108, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
-  - {fileID: 4866765140763631827, guid: 1fcdf8bd88d5dfd4bbae69ccbcbdef3a, type: 3}
+  - {fileID: 2100000, guid: 944a18181b30c124195794c43a95f1ac, type: 2}
+  - {fileID: 2100000, guid: cde5ef551d4963d44ab15c9a2e23c14f, type: 2}
+  - {fileID: 2100000, guid: a3f870d1be8ca614ea81c3ce3e383ae8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1431,3 +1582,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &5969632760253210364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641461322268596285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5

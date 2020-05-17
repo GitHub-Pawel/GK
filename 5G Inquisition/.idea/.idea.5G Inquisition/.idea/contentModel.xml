@@ -11,6 +11,7 @@
             <e p="Documentation.txt" t="Include" />
           </e>
         </e>
+        <e p="piecesDespawner.cs" t="Include" />
         <e p="PlayerAnimation.cs" t="Include" />
         <e p="PlayerAnimator.cs" t="Include" />
         <e p="PyroParticles" t="Include">

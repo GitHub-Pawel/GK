@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 843998629587274556}
   - component: {fileID: 1401003019643661146}
   - component: {fileID: 7777814747915735460}
+  - component: {fileID: 5446789832080605782}
   m_Layer: 0
   m_Name: 5g_cable2
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,6 +126,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &5446789832080605782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176105032499286219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &2402317026485023582
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +192,7 @@ GameObject:
   - component: {fileID: 2488645912438245108}
   - component: {fileID: 5066517804563962494}
   - component: {fileID: 7802569670654778141}
+  - component: {fileID: 7002269094995897765}
   m_Layer: 0
   m_Name: 5g_cable1
   m_TagString: Untagged
@@ -224,7 +240,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,6 +304,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &7002269094995897765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116237380638893295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &3250262379840100178
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +332,7 @@ GameObject:
   - component: {fileID: 3440342208073439271}
   - component: {fileID: 1045210905016757135}
   - component: {fileID: 2300838636492282486}
+  - component: {fileID: 7367319152214792210}
   m_Layer: 0
   m_Name: 5g_metalBar2
   m_TagString: Untagged
@@ -349,7 +380,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -413,6 +444,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &7367319152214792210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3250262379840100178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &4451665703525332457
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +472,7 @@ GameObject:
   - component: {fileID: 8125771448224800700}
   - component: {fileID: 2351248667859761398}
   - component: {fileID: 7936628441825783107}
+  - component: {fileID: 5781960459420640368}
   m_Layer: 0
   m_Name: 5g_pole
   m_TagString: Untagged
@@ -474,7 +520,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -538,6 +584,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &5781960459420640368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4451665703525332457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &4617997107916406905
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +612,7 @@ GameObject:
   - component: {fileID: 3130904974772351878}
   - component: {fileID: 5798193079190732098}
   - component: {fileID: 1882687034816263715}
+  - component: {fileID: 2399488835876694819}
   m_Layer: 0
   m_Name: 5g_antenna1
   m_TagString: Untagged
@@ -599,7 +660,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -663,6 +724,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &2399488835876694819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617997107916406905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &5685260990843883433
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +752,7 @@ GameObject:
   - component: {fileID: 2969716516311147733}
   - component: {fileID: 1734528846882897877}
   - component: {fileID: 5107024991844055214}
+  - component: {fileID: 7203204264446854022}
   m_Layer: 0
   m_Name: 5g_antenna3
   m_TagString: Untagged
@@ -724,7 +800,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -788,6 +864,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &7203204264446854022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5685260990843883433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &6929196227171137334
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +892,7 @@ GameObject:
   - component: {fileID: 7188191354687927338}
   - component: {fileID: 4063976811151757625}
   - component: {fileID: 6026209115570511737}
+  - component: {fileID: 2818512453163584114}
   m_Layer: 0
   m_Name: 5g_antenna2
   m_TagString: Untagged
@@ -849,7 +940,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -913,6 +1004,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &2818512453163584114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929196227171137334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
 --- !u!1 &8350034219227141662
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +1032,7 @@ GameObject:
   - component: {fileID: 8639676697936613181}
   - component: {fileID: 1561592647260626245}
   - component: {fileID: 7644407013170219893}
+  - component: {fileID: 1234934865395632435}
   m_Layer: 0
   m_Name: 5g_metalBar1
   m_TagString: Untagged
@@ -974,7 +1080,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 961779688503701456, guid: b04b8f4e43c3d46429ac891b2b9d138b, type: 3}
+  - {fileID: 2100000, guid: 6a86a6ce530a2b04b8cf1710cdaec774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1038,3 +1144,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+--- !u!114 &1234934865395632435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8350034219227141662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 0.5
