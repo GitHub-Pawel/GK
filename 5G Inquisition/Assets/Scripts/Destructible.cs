@@ -21,18 +21,27 @@ public class Destructible : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        
         Punch();
+        DestroyDestructible();
+        
+        
+    }
+
+    public void DestroyDestructible()
+    {
         
         if(destroyedVersion)
         {
-            Debug.Log("Destroying!");
-            var transformInfo = gameObject.transform;
-            clone = Instantiate(destroyedVersion, transformInfo.position, transformInfo.rotation);
-            Destroy(gameObject);
-            Punch();
+            if (!gameObject.name.Contains("(Clone)"))
+            {
+                Debug.Log("Destroying!");
+                Debug.Log(gameObject.tag);
+                var transformInfo = gameObject.transform;
+                clone = Instantiate(destroyedVersion, transformInfo.position, transformInfo.rotation);
+                Destroy(gameObject);
+            }
+            
         }
-        
     }
 
 

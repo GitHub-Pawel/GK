@@ -9,7 +9,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] float timer = 2f;
     float countdown;
     [SerializeField] float radius = 3f;
-    [SerializeField] float force = 10f;
+    [SerializeField] float force = 50f;
 
     bool hasExploded = false;
 
@@ -39,9 +39,19 @@ public class Grenade : MonoBehaviour
         Destroy(spawnedParticle, 1);
 
 
-        Collider [] colliders = Physics.OverlapSphere(transform.position, radius);
+        Collider [] collidersToDeatroy = Physics.OverlapSphere(transform.position, radius);
 
-        foreach (Collider nearbyObject in colliders)
+        foreach (Collider nearbyObject in collidersToDeatroy)
+        {
+            Destructible dest = nearbyObject.GetComponent<Destructible>();
+            if (dest != null)
+            {
+                dest.DestroyDestructible();
+            }
+        }
+        
+        Collider [] collidersToPunch = Physics.OverlapSphere(transform.position, radius);
+        foreach (Collider nearbyObject in collidersToPunch)
         {
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
             if(rb != null)
@@ -49,7 +59,7 @@ public class Grenade : MonoBehaviour
                 rb.AddExplosionForce(force, transform.position, radius);
             }
         }
-
+        
         hasExploded = true;
         Destroy(gameObject);
     }

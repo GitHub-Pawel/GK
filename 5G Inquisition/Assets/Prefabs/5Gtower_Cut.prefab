@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5446789832080605782}
   m_Layer: 0
   m_Name: 5g_cable2
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +149,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1661238114231107917}
+  - component: {fileID: 6609767936155118974}
+  - component: {fileID: 2900970071191584730}
   m_Layer: 0
   m_Name: 5Gtower_Cut
   m_TagString: Untagged
@@ -178,6 +180,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6609767936155118974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402317026485023582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0a27a360639374e8abcf18e2adfe87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedVersion: {fileID: 0}
+--- !u!114 &2900970071191584730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402317026485023582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac91fd5e144eb1343be254f657bcf2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  fadeSpeed: 1
 --- !u!1 &3116237380638893295
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +224,7 @@ GameObject:
   - component: {fileID: 7002269094995897765}
   m_Layer: 0
   m_Name: 5g_cable1
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,7 +364,7 @@ GameObject:
   - component: {fileID: 7367319152214792210}
   m_Layer: 0
   m_Name: 5g_metalBar2
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,7 +504,7 @@ GameObject:
   - component: {fileID: 5781960459420640368}
   m_Layer: 0
   m_Name: 5g_pole
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -615,7 +644,7 @@ GameObject:
   - component: {fileID: 2399488835876694819}
   m_Layer: 0
   m_Name: 5g_antenna1
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,7 +784,7 @@ GameObject:
   - component: {fileID: 7203204264446854022}
   m_Layer: 0
   m_Name: 5g_antenna3
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -895,7 +924,7 @@ GameObject:
   - component: {fileID: 2818512453163584114}
   m_Layer: 0
   m_Name: 5g_antenna2
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,7 +1064,7 @@ GameObject:
   - component: {fileID: 1234934865395632435}
   m_Layer: 0
   m_Name: 5g_metalBar1
-  m_TagString: Untagged
+  m_TagString: PiceOfSomething
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

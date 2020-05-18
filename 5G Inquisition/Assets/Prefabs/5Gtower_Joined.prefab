@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5796113791857231367}
   - component: {fileID: 2673176753647407613}
   - component: {fileID: 169916187069614426}
+  - component: {fileID: 8090960110492005585}
   m_Layer: 0
   m_Name: 5Gtower_Joined
   m_TagString: Untagged
@@ -107,4 +108,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a27a360639374e8abcf18e2adfe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyedVersion: {fileID: 0}
+  destroyedVersion: {fileID: 2402317026485023582, guid: 4575e9c736dde604c85be971f6390ba0,
+    type: 3}
+--- !u!114 &8090960110492005585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211571610090648283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9d8919b67063245a0e97d9b4c70d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: bae56aad490e7364bb78d1d90d02146d, type: 2}

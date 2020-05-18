@@ -11,7 +11,6 @@
             <e p="Documentation.txt" t="Include" />
           </e>
         </e>
-        <e p="piecesDespawner.cs" t="Include" />
         <e p="PlayerAnimation.cs" t="Include" />
         <e p="PlayerAnimator.cs" t="Include" />
         <e p="PyroParticles" t="Include">
@@ -39,7 +38,12 @@
           <e p="Grenade.cs" t="Include" />
           <e p="GrenadeLauncher.cs" t="Include" />
           <e p="MouseLook.cs" t="Include" />
+          <e p="piecesDespawner.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="PlayerUI.cs" t="Include" />
+          <e p="Tower.cs" t="Include" />
+          <e p="TowerConfig.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
