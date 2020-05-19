@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+
 
 public class Player : MonoBehaviour
 {
@@ -10,12 +12,44 @@ public class Player : MonoBehaviour
     public int towerCounter = 5;
     Camera cam;			// Reference to our camera
 
+    private PostProcessVolume m_PostProcessVolume;
+    
+    
     void Start () {
         cam = Camera.main;
+    }
+    
+    private void ControlPostProcessingWeight () {
+        if (!isFoilHatEquipped())
+        {
+            LensDistortion lensDistortion;
+            Vignette vignette;
+            m_PostProcessVolume = GetComponent<PostProcessVolume>();
+            if (m_PostProcessVolume.profile.TryGetSettings(out lensDistortion))
+            {
+                if (lensDistortion.intensity.value > -50)
+                {
+                    lensDistortion.intensity.value -= 8;
+                    Debug.Log("Inceasing distortion to " + lensDistortion.intensity.value);
+                }
+            }
+            if (m_PostProcessVolume.profile.TryGetSettings(out vignette))
+            {
+                vignette.color.value = Color.red;
+                if (vignette.intensity.value < .8f)
+                {
+                    vignette.intensity.value += 0.1f;
+                    Debug.Log("Inceasing vignette to " + vignette.intensity.value);
+                }
+            
+            }
+        }
     }
     public void onTowerAttack(float healthDrop)
     {
         health -= healthDrop;
+        ControlPostProcessingWeight();
+        
         if (health <= 0)
         {
             #if UNITY_EDITOR
@@ -25,6 +59,60 @@ public class Player : MonoBehaviour
             #else
                     Application.Quit ();
             #endif
+        }
+    }
+
+    private bool isFoilHatEquipped()
+    {
+        if (focus != null && focus.name == "FoilHat")
+        {
+            LensDistortion lensDistortion;
+            Vignette vignette;
+            Bloom bloom;
+            m_PostProcessVolume = GetComponent<PostProcessVolume>();
+            if (m_PostProcessVolume.profile.TryGetSettings(out lensDistortion))
+            {
+                lensDistortion.intensity.value = 0f;
+            }
+            if (m_PostProcessVolume.profile.TryGetSettings(out vignette))
+            {
+                vignette.intensity.value = .5f;
+                vignette.color.value = Color.cyan;
+            }
+            if (m_PostProcessVolume.profile.TryGetSettings(out bloom))
+            {
+                bloom.intensity.value = 20;
+            }
+            
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void unequipFoilHat()
+    {
+        if (focus != null && focus.name == "FoilHat")
+        {
+            LensDistortion lensDistortion;
+            Vignette vignette;
+            Bloom bloom;
+            m_PostProcessVolume = GetComponent<PostProcessVolume>();
+            if (m_PostProcessVolume.profile.TryGetSettings(out lensDistortion))
+            {
+                lensDistortion.intensity.value = 0f;
+            }
+            if (m_PostProcessVolume.profile.TryGetSettings(out vignette))
+            {
+                vignette.intensity.value = 0f;
+                vignette.color.value = Color.clear;
+            }
+            if (m_PostProcessVolume.profile.TryGetSettings(out bloom))
+            {
+                bloom.intensity.value = 0;
+            }  
         }
     }
 
@@ -66,7 +154,6 @@ public class Player : MonoBehaviour
                 Debug.Log("Removing focus on "+focus.name);
                 RemoveFocus();
             }
-            
         }
     }
     void SetFocus (Interactible newFocus)
@@ -75,22 +162,18 @@ public class Player : MonoBehaviour
         // If our focus has changed
         if (newFocus != focus)
         {
-            // Defocus the old one
             if (focus != null)
-                //focus.OnDefocused();
-                //
             Debug.Log("Focused now set to "+focus.name);
             focus = newFocus;	// Set our new focus
         }
-		
-        //newFocus.OnFocused(transform);
+		isFoilHatEquipped();
     }
+    
     void RemoveFocus ()
     {
-        if (focus != null)
-            //focus.OnDefocused();
-
+        //if (focus != null)
+        unequipFoilHat();
         focus = null;
-        //motor.StopFollowingTarget();
+        
     }
 }
