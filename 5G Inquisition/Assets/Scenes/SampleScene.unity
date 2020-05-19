@@ -1980,7 +1980,6 @@ GameObject:
   - component: {fileID: 943243196}
   - component: {fileID: 943243198}
   - component: {fileID: 943243197}
-  - component: {fileID: 943243199}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2070,21 +2069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fa1eba161f72049a29820ec004f515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  focus: {fileID: 0}
   health: 100
   towerCounter: 5
---- !u!114 &943243199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943243193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babdc6c095e8bea4ea90c5b1102b07d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,7 +3171,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 118865a854d76eb458c27e207d9d9312,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26
+      value: 3.57
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 118865a854d76eb458c27e207d9d9312,
         type: 3}
@@ -3234,17 +3221,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 118865a854d76eb458c27e207d9d9312,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 145.14996
+      value: 525.1961
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 118865a854d76eb458c27e207d9d9312,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 238.80138
+      value: 864.055
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 118865a854d76eb458c27e207d9d9312,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 238.80138
+      value: 864.055
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 118865a854d76eb458c27e207d9d9312,
         type: 3}
@@ -3276,6 +3263,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9cb57906300e44cae1992edbaaf1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1950181483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950181478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b872db10623f45449011459bcad2d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+--- !u!135 &1950181484
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950181478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0012
+  m_Center: {x: 0.000033843677, y: 0.0000075703415, z: -0.00013497987}
 --- !u!1 &1966896895
 GameObject:
   m_ObjectHideFlags: 0

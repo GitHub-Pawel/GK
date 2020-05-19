@@ -14,7 +14,6 @@ public class Tower : MonoBehaviour
         if (player == null)
         {
             player = FindObjectOfType<Player>();
-           //player = FindObjectOfType<PlayerController>();
         }
     }
 
