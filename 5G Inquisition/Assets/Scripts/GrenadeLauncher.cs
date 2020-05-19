@@ -17,7 +17,8 @@ public class GrenadeLauncher : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        //if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetMouseButtonDown(1))
             Launch();
     }
 
