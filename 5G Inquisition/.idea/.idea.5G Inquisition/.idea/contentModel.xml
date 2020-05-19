@@ -37,9 +37,12 @@
           <e p="Destructible.cs" t="Include" />
           <e p="Grenade.cs" t="Include" />
           <e p="GrenadeLauncher.cs" t="Include" />
+          <e p="Interactible.cs" t="Include" />
+          <e p="ItemPickup.cs" t="Include" />
           <e p="MouseLook.cs" t="Include" />
           <e p="piecesDespawner.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerUI.cs" t="Include" />
           <e p="Tower.cs" t="Include" />

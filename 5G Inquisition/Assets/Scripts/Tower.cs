@@ -6,7 +6,7 @@ public class Tower : MonoBehaviour
 {
     private bool attacking = false;
     private Player player;
-
+    //private PlayerController player;
     public TowerConfig config;
 
     void Start()
@@ -14,6 +14,7 @@ public class Tower : MonoBehaviour
         if (player == null)
         {
             player = FindObjectOfType<Player>();
+           //player = FindObjectOfType<PlayerController>();
         }
     }
 
