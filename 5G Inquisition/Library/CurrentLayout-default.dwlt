@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 105
+  controlID: 110
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 106
+  controlID: 111
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 107
+  controlID: 112
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -395,20 +395,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f63b0000
-      m_LastClickedID: 15350
-      m_ExpandedIDs: c2bdffff54c7ffff60c7fffff6e0fffffae2ffffdce7ffffe0f1ffffecf1ffff3ef8ffffcc3b0000323c0000
+      m_SelectedIDs: bc390000
+      m_LastClickedID: 14780
+      m_ExpandedIDs: 6efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GrenadeLauncher
-        m_OriginalName: GrenadeLauncher
+        m_Name: Player
+        m_OriginalName: Player
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -2004
+        m_UserData: 14780
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -457,9 +457,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.30786562, y: 1.8750031, z: 0.15343922}
+    m_Target: {x: 1.4253123, y: 2.865732, z: 5.8623}
     speed: 2
-    m_Value: {x: -0.30786562, y: 1.8750031, z: 0.15343922}
+    m_Value: {x: 1.4253123, y: 2.865732, z: 5.8623}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -505,9 +505,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.034441788, y: -0.96576446, z: 0.18320681, w: 0.1808007}
+    m_Target: {x: -0.047551185, y: -0.13086312, z: 0.0064414004, w: -0.9903175}
     speed: 2
-    m_Value: {x: 0.034439363, y: -0.96569645, z: 0.1831939, w: 0.18078797}
+    m_Value: {x: -0.047547467, y: -0.13085288, z: 0.0064408965, w: -0.9902401}
   m_Size:
     m_Target: 3.5638268
     speed: 2
@@ -639,20 +639,20 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\pawel\Desktop\GK_tmp04\GK\5G Inquisition
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 123f0000
-    m_LastClickedID: 16146
-    m_ExpandedIDs: 00000000123f0000143f0000163f0000183f00001a3f00001c3f00001e3f000000ca9a3b
+    m_SelectedIDs: 14420000
+    m_LastClickedID: 16916
+    m_ExpandedIDs: 00000000103e0000123e0000143e0000163e0000183e00001a3e00001c3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,7 +680,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000123f0000143f0000163f0000183f00001a3f00001c3f00001e3f0000
+    m_ExpandedIDs: 00000000103e0000123e0000143e0000163e0000183e00001a3e00001c3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -705,8 +705,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 00f8ffff
-    m_LastClickedInstanceID: -2048
+    m_SelectedInstanceIDs: 602e0000
+    m_LastClickedInstanceID: 11872
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000223800000c38000050a0000030ec00005c350000ce510000fa340000d0340000865a0000108c0000be570000148c0000b8e70000284b0000ccc80000dcdc0000fedc0000d64b0000e44b0000b0380000a438000052370000ea3800007e36000052380000165500009655000066330000e6340000e43300003a4100003441000082350000a6350000c6350000a23300008e5800002c39000000000000
     m_RenameOverlay:

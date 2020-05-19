@@ -8,6 +8,7 @@ public class Destructible : MonoBehaviour
     public GameObject destroyedVersion;
     private GameObject clone;
     public int towerLifeLevel = 100;
+    public Player player;
 
     void Punch()
     {
@@ -21,12 +22,13 @@ public class Destructible : MonoBehaviour
 
     private void OnMouseDown()
     {
-        towerLifeLevel -= 20;
+        towerLifeLevel -= 10;
+        Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
         if (towerLifeLevel <= 0) {
             Punch();
             DestroyDestructible();
+            Debug.Log(String.Format("Number of remaining towers: " + player.towerCounter));
         }
-        Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
     }
 
     public void DestroyDestructible()
@@ -41,6 +43,7 @@ public class Destructible : MonoBehaviour
                 var transformInfo = gameObject.transform;
                 clone = Instantiate(destroyedVersion, transformInfo.position, transformInfo.rotation);
                 Destroy(gameObject);
+                player.towerCounter--;    //TODO make player.towerCounter attribute as private + use getter/setter
             }
             
         }
