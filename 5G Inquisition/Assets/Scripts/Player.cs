@@ -8,8 +8,10 @@ using UnityEngine.Rendering.PostProcessing;
 public class Player : MonoBehaviour
 {
     public Interactible focus;	// Our current focus: Item, Enemy etc.
-    public float health = 100f;
+    public float startingHealth = 100f;
+    public float health;
     public int towerCounter = 5;
+    private bool healing;
     Camera cam;			// Reference to our camera
 
     private PostProcessVolume m_PostProcessVolume;
@@ -17,8 +19,14 @@ public class Player : MonoBehaviour
     
     void Start () {
         cam = Camera.main;
+        health = startingHealth;
     }
-    
+
+    private float healthLost()
+    {
+        return startingHealth - health;
+    }
+
     private void ControlPostProcessingWeight () {
         if (!isFoilHatEquipped())
         {
@@ -27,19 +35,16 @@ public class Player : MonoBehaviour
             m_PostProcessVolume = GetComponent<PostProcessVolume>();
             if (m_PostProcessVolume.profile.TryGetSettings(out lensDistortion))
             {
-                if (lensDistortion.intensity.value > -50)
-                {
-                    lensDistortion.intensity.value -= 8;
-                    Debug.Log("Inceasing distortion to " + lensDistortion.intensity.value);
-                }
+                lensDistortion.intensity.value = -((100f - health)/1.4f);
+                Debug.Log("Inceasing distortion to " + lensDistortion.intensity.value);
             }
             if (m_PostProcessVolume.profile.TryGetSettings(out vignette))
             {
                 vignette.color.value = Color.red;
                 if (vignette.intensity.value < .8f)
                 {
-                    vignette.intensity.value += 0.1f;
-                    Debug.Log("Inceasing vignette to " + vignette.intensity.value);
+                    vignette.intensity.value = healthLost()/100;
+                    //Debug.Log("Inceasing vignette to " + vignette.intensity.value);
                 }
             
             }
@@ -59,6 +64,27 @@ public class Player : MonoBehaviour
             #else
                     Application.Quit ();
             #endif
+        }
+    }
+    
+    private IEnumerator Heal()
+    {
+        while(healing)
+        {
+            if (health <= startingHealth-5)
+            {
+                health += 5f;
+                Debug.Log("Healed to "+health);
+                
+            }
+            else
+            {
+                health = startingHealth;
+                Debug.Log("Healed to "+health);
+            }
+            
+            yield return new WaitForSeconds(2f);
+
         }
     }
 
@@ -83,7 +109,9 @@ public class Player : MonoBehaviour
             {
                 bloom.intensity.value = 20;
             }
-            
+
+            healing = true;
+            StartCoroutine(Heal());
             return true;
         }
         else
@@ -174,6 +202,9 @@ public class Player : MonoBehaviour
         //if (focus != null)
         unequipFoilHat();
         focus = null;
+        healing = false;
+        ControlPostProcessingWeight();
+
         
     }
 }
