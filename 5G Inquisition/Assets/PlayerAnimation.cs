@@ -14,17 +14,26 @@ public class PlayerAnimation : MonoBehaviour
     void Update() {
         playAttackAnimation();
         playGrenadeAnimation();
+        playWalkAnimation();
     }
 
     public void playAttackAnimation() {
         if (Input.GetMouseButtonDown(0)) {
-            animator.SetTrigger("triggerAttack01");
+            animator.SetTrigger("BaseballHit");
         }
     }
     
     public void playGrenadeAnimation() {
         if (Input.GetMouseButtonDown(1)) {
-            animator.SetTrigger("triggerAttack02");
+            animator.SetTrigger("GrenadeThrow");
+        }
+    }
+
+    public void playWalkAnimation() {
+        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical")) {
+            animator.SetBool("Walk", true);
+        } else {
+            animator.SetBool("Walk", false);
         }
     }
 }

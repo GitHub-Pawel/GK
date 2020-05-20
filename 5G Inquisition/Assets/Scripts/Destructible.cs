@@ -7,8 +7,14 @@ public class Destructible : MonoBehaviour
 {
     public GameObject destroyedVersion;
     private GameObject clone;
-    public int towerLifeLevel = 100;
+
+    public Tower tower;
+    public float towerLifeLevel;
     public Player player;
+
+    void Start() {
+        towerLifeLevel = tower.config.health;   
+    }
 
     void Punch()
     {

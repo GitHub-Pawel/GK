@@ -12,6 +12,7 @@ public class TowerUI : MonoBehaviour
     private void Start()
     {
         destructible = GetComponent<Destructible>();
+        slider.maxValue = destructible.tower.config.health;
     }
 
     void Update()

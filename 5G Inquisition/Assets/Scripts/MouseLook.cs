@@ -5,7 +5,8 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     public float mouseSensivity = 100f;
-    public Transform playerBody;
+    [SerializeField]
+    public Transform player, head;
     float xRotation = 0f;
     void Start()
     {
@@ -18,9 +19,10 @@ public class MouseLook : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime;
 
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -90f, 60f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        transform.localRotation = Quaternion.Euler(0f, xRotation, 90f);
+       
+        player.Rotate(Vector3.up * mouseX);
     }
 }
