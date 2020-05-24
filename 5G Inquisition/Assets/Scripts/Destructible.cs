@@ -13,7 +13,14 @@ public class Destructible : MonoBehaviour
     public Player player;
 
     void Start() {
-        towerLifeLevel = tower.config.health;   
+        if (destroyedVersion)
+        {
+            if (!gameObject.name.Contains("(Clone)"))
+            {
+                towerLifeLevel = tower.config.health;
+            }
+        }
+        
     }
 
     void Punch()
@@ -28,13 +35,21 @@ public class Destructible : MonoBehaviour
 
     private void OnMouseDown()
     {
-        towerLifeLevel -= 10;
-        Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
-        if (towerLifeLevel <= 0) {
+        if (towerLifeLevel > 0)
+        {
+            HurtTheTower();
+        }
+        else{
             Punch();
             DestroyDestructible();
-            Debug.Log(String.Format("Number of remaining towers: " + player.towerCounter));
+            //Debug.Log(String.Format("Number of remaining towers: " + player.towerCounter)); //When tower is destroyed, destroyed version appears with NEW VERSION of this script, which doesn't have player or tower assigned and produces NULL EXCEPTIONS
         }
+    }
+    
+    public void HurtTheTower()
+    {
+        towerLifeLevel -= 10;
+        Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
     }
 
     public void DestroyDestructible()

@@ -11,6 +11,33 @@
             <e p="Documentation.txt" t="Include" />
           </e>
         </e>
+        <e p="InventorySlot.cs" t="Include" />
+        <e p="NatureManufacture Assets - Trials Not Full Resolution" t="Include">
+          <e p="EasyRoads-HD_Add_ON" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="Decal_Metalic_Road_Shader Parallax ArrayTrial.shader" t="Include" />
+              <e p="Decal_Metalic_Road_Shader Parallax Trial.shader" t="Include" />
+              <e p="Standard_Metalic_Cross_Road_Shader Parallax ArrayTrial.shader" t="Include" />
+              <e p="Standard_Metalic_Road_Shader Parallax ArrayTrial.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Foliage Shaders" t="Include">
+            <e p="Cross_Model_Shader.shader" t="Include" />
+            <e p="NM_indirect.cginc" t="Include" />
+            <e p="NMWind.cginc" t="Include" />
+            <e p="NMWindNoShiver.cginc" t="Include" />
+            <e p="Tree_Bark_Metalic.shader" t="Include" />
+            <e p="Tree_Leaves_Specular.shader" t="Include" />
+          </e>
+          <e p="NatureManufacture Wind" t="Include">
+            <e p="NM_Wind.cs" t="Include" />
+          </e>
+          <e p="Park Photo Scanned Assets" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="Standard_Metalic_UV_Free_Walls_and_Floors.shader" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="PlayerAnimation.cs" t="Include" />
         <e p="PlayerAnimator.cs" t="Include" />
         <e p="PyroParticles" t="Include">
@@ -38,6 +65,9 @@
           <e p="Grenade.cs" t="Include" />
           <e p="GrenadeLauncher.cs" t="Include" />
           <e p="Interactible.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
+          <e p="InventoryUI.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
           <e p="ItemPickup.cs" t="Include" />
           <e p="MouseLook.cs" t="Include" />
           <e p="piecesDespawner.cs" t="Include" />
@@ -45,9 +75,27 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerUI.cs" t="Include" />
+          <e p="SceneSwitcher.cs" t="Include" />
           <e p="Tower.cs" t="Include" />
           <e p="TowerConfig.cs" t="Include" />
           <e p="TowerUI.cs" t="Include" />
+        </e>
+        <e p="Windridge City Assets" t="Include">
+          <e p="CTS Trial" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="CTS Terrain Shader Advanced LOD Trial.shader" t="Include" />
+              <e p="CTS Terrain Shader Advanced Trial.shader" t="Include" />
+            </e>
+          </e>
+          <e p="READ ME - About project and assets.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="ExtendedFlycam.cs" t="Include" />
+            <e p="UIQuallityManager" t="Include">
+              <e p="UIQualityManager.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Third-Party Notices.txt" t="Include" />
+          <e p="UnityCompanionLicense_ForAssetComnponentsStatedInThird-PartyNotices.txt" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

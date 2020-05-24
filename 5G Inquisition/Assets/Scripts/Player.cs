@@ -180,20 +180,27 @@ public class Player : MonoBehaviour
     void SetFocus (Interactible newFocus)
     {
         Debug.Log("SetFocus invoked. Equipped something");
-        // If our focus has changed
         if (newFocus != focus)
         {
             if (focus != null)
-            Debug.Log("Focused now set to "+focus.name);
-            focus = newFocus;	// Set our new focus
+            { 
+                focus.OnDefocused();
+            }
+            focus = newFocus; // Set our new focus
+            Debug.Log("Focused now set to " + focus.name);
         }
-		isFoilHatEquipped();
+        newFocus.OnFocused(transform);
+        isFoilHatEquipped();
     }
     
     void RemoveFocus ()
     {
         //if (focus != null)
         unequipFoilHat();
+        if (focus != null)
+        {
+            focus.OnDefocused();
+        }
         focus = null;
         healing = false;
         ControlPostProcessingWeight();

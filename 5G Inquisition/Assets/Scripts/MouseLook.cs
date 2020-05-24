@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
@@ -8,6 +6,7 @@ public class MouseLook : MonoBehaviour
     [SerializeField]
     public Transform player, head;
     float xRotation = 0f;
+    public bool shouldILook = true;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -15,6 +14,12 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        if (!shouldILook)
+        {
+            return;
+        }
+            
+        
         float mouseX = Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime;
 
