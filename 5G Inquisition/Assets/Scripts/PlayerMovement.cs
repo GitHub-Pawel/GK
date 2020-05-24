@@ -10,9 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
     public float jumpHeight = 3f; 
 
+    public Transform playerBody;
     Vector3 velocity;
     bool isGrounded;
 
@@ -40,5 +40,7 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        playerBody.position = new Vector3(transform.position.x, playerBody.position.y, transform.position.z);
     }
 }

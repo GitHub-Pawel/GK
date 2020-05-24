@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public int towerCounter = 5;
     private bool healing;
     Camera cam;			// Reference to our camera
+    public SceneSwitcher sceneSwitcher;
 
     private PostProcessVolume m_PostProcessVolume;
     
@@ -57,13 +58,7 @@ public class Player : MonoBehaviour
         
         if (health <= 0)
         {
-            #if UNITY_EDITOR
-                    //TODO Display EndGameGUI in this place
-                    Debug.Log("YOU LOSE");
-                    UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                    Application.Quit ();
-            #endif
+            sceneSwitcher.GameOver();
         }
     }
     
@@ -149,9 +144,7 @@ public class Player : MonoBehaviour
     {
         if (towerCounter == 0)
         {
-            //TODO Display EndGameGUI in this place
-            Debug.Log("YOU WIN");
-            UnityEditor.EditorApplication.isPlaying = false;
+            sceneSwitcher.YouWin();
         }
         
         // If we press right mouse
