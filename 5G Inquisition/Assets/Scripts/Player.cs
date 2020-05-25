@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     
     void Start () {
         cam = Camera.main;
-        health = startingHealth;
+        //health = startingHealth;
     }
 
     private float healthLost()
@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     }
     public void onTowerAttack(float healthDrop)
     {
+        
         health -= healthDrop;
         ControlPostProcessingWeight();
         

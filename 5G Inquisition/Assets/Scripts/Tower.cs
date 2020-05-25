@@ -6,15 +6,17 @@ public class Tower : MonoBehaviour
 {
     private bool attacking = false;
     private Player player;
-    //private PlayerController player;
     public TowerConfig config;
-
+    private PlayerStats playerStats;
+    
     void Start()
     {
         if (player == null)
         {
             player = FindObjectOfType<Player>();
         }
+
+        playerStats = player.GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class Tower : MonoBehaviour
         while(attacking)
         {
             player.onTowerAttack(config.power);
+            playerStats.TakeDamage((int)config.power);
             yield return new WaitForSeconds(config.attackIntervalSec);
         }
     }
