@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
 
     void Start() {
         animator = gameObject.GetComponent<Animator>();

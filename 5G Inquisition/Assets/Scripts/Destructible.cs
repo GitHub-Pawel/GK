@@ -11,6 +11,7 @@ public class Destructible : MonoBehaviour
     public Tower tower;
     public float towerLifeLevel;
     public Player player;
+    public PlayerAnimation playerAnimation;
 
     void Start() {
         if (destroyedVersion)
@@ -48,8 +49,19 @@ public class Destructible : MonoBehaviour
     
     public void HurtTheTower()
     {
-        towerLifeLevel -= 10;
-        Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
+        if (authToHit())
+        {
+            towerLifeLevel -= 15;
+            Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
+        }
+    }
+
+    private bool authToHit()
+    {
+        if (Vector3.Distance(player.transform.position, tower.transform.position) < 10f)
+            if (!playerAnimation.animator.GetCurrentAnimatorStateInfo(0).IsName("Baseball Hit"))
+                return true;
+        return false;
     }
 
     public void DestroyDestructible()
