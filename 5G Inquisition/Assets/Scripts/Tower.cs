@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,8 @@ public class Tower : MonoBehaviour
     private Player player;
     public TowerConfig config;
     private PlayerStats playerStats;
-    
+    public CanvasGroup canvasGroup;
+
     void Start()
     {
         if (player == null)
@@ -22,6 +24,8 @@ public class Tower : MonoBehaviour
     void Update()
     {
         checkDistance();
+
+        canvasGroup.alpha = config.range - Vector3.Distance(player.transform.position, transform.position)*0.6f;
     }
 
     private IEnumerator Attack()
@@ -42,7 +46,7 @@ public class Tower : MonoBehaviour
             {
                 attacking = true;
                 StartCoroutine(Attack());
-            } 
+            }
         }
         else
         {

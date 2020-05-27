@@ -63,6 +63,7 @@
           <e p="Readme.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="CanvasFader.cs" t="Include" />
           <e p="Destructible.cs" t="Include" />
           <e p="Grenade.cs" t="Include" />
           <e p="GrenadeLauncher.cs" t="Include" />
