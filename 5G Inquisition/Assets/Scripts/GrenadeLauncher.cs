@@ -7,18 +7,14 @@ public class GrenadeLauncher : MonoBehaviour
     // vars
     public Transform spawnPoint;
     public GameObject grenade;
+    public PlayerAnimation playerAnimation;
 
     float throwForce = 20f;
-
-    void Start()
-    {
-
-    }
 
     void FixedUpdate()
     {
         //if (Input.GetKeyDown(KeyCode.G))
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !playerAnimation.animator.GetCurrentAnimatorStateInfo(0).IsName("Grenade Throw"))
             Launch();
     }
 

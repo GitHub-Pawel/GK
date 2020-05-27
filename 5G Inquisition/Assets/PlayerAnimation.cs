@@ -18,13 +18,13 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     public void playAttackAnimation() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Baseball Hit")) {
             animator.SetTrigger("BaseballHit");
         }
     }
     
     public void playGrenadeAnimation() {
-        if (Input.GetMouseButtonDown(1)) {
+        if (Input.GetMouseButtonDown(1) && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Grenade Throw")) {
             animator.SetTrigger("GrenadeThrow");
         }
     }
