@@ -24,7 +24,11 @@ public class Tower : MonoBehaviour
     void Update()
     {
         checkDistance();
+        canvasFader();
+    }
 
+    public void canvasFader()
+    {
         canvasGroup.alpha = config.range - Vector3.Distance(player.transform.position, transform.position)*0.6f;
     }
 
