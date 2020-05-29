@@ -16,11 +16,15 @@ public class Player : MonoBehaviour
     public SceneSwitcher sceneSwitcher;
 
     private PostProcessVolume m_PostProcessVolume;
+
+    [SerializeField] public AudioClip towerAttackSound;
+    public AudioSource audioSource;
     
     
     void Start () {
         cam = Camera.main;
         //health = startingHealth;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private float healthLost()
@@ -55,6 +59,7 @@ public class Player : MonoBehaviour
     {
         
         health -= healthDrop;
+        audioSource.PlayOneShot(towerAttackSound);
         ControlPostProcessingWeight();
         
         if (health <= 0)

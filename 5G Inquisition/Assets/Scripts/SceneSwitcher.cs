@@ -14,7 +14,7 @@ public class SceneSwitcher : MonoBehaviour
         Time.timeScale = 1f;
     }
     void Update() {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isGamePaused)
             {

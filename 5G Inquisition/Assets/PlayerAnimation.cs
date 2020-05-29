@@ -7,8 +7,13 @@ public class PlayerAnimation : MonoBehaviour
 {
     public Animator animator;
 
+    [SerializeField] public AudioClip baseballSwooshSound;
+    [SerializeField] public AudioClip grenadeThrowSound;
+    public AudioSource audioSource;
+
     void Start() {
         animator = gameObject.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -20,12 +25,14 @@ public class PlayerAnimation : MonoBehaviour
     public void playAttackAnimation() {
         if (Input.GetMouseButtonDown(0) && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Baseball Hit")) {
             animator.SetTrigger("BaseballHit");
+            audioSource.PlayOneShot(baseballSwooshSound);
         }
     }
     
     public void playGrenadeAnimation() {
         if (Input.GetMouseButtonDown(1) && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Grenade Throw")) {
             animator.SetTrigger("GrenadeThrow");
+            audioSource.PlayOneShot(grenadeThrowSound);
         }
     }
 

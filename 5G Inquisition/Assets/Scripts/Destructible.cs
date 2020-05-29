@@ -13,6 +13,10 @@ public class Destructible : MonoBehaviour
     public Player player;
     public PlayerAnimation playerAnimation;
 
+    [SerializeField] private AudioClip towerBaseballHitSound;
+    [SerializeField] public AudioClip towerCollapseSound;
+    public AudioSource audioSource;
+
     void Start() {
         if (destroyedVersion)
         {
@@ -21,7 +25,7 @@ public class Destructible : MonoBehaviour
                 towerLifeLevel = tower.config.health;
             }
         }
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Punch()
@@ -52,6 +56,7 @@ public class Destructible : MonoBehaviour
         if (authToHit())
         {
             towerLifeLevel -= 15;
+            audioSource.PlayOneShot(towerBaseballHitSound);
             Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
         }
     }
@@ -75,6 +80,7 @@ public class Destructible : MonoBehaviour
                 Debug.Log(gameObject.tag);
                 var transformInfo = gameObject.transform;
                 clone = Instantiate(destroyedVersion, transformInfo.position, transformInfo.rotation);
+                audioSource.PlayOneShot(towerCollapseSound); // nie dziala bo obiekt jest usuwany
                 Destroy(gameObject);
                 player.towerCounter--;    //TODO make player.towerCounter attribute as private + use getter/setter
             }
