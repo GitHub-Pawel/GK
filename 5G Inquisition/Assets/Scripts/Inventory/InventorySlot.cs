@@ -34,4 +34,19 @@ public class InventorySlot : MonoBehaviour
             item.Use();
         }
     }
+
+    public string GetItemName()
+    {
+        if (item != null)
+        {
+            return item.name;
+        }
+        else
+        {
+            return "null";
+        }
+
+    }
+    
+    
 }
