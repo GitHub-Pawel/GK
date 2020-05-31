@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TowerLevel2
   m_EditorClassIdentifier: 
   health: 100
-  power: 2
+  power: 8
   range: 10
   attackIntervalSec: 2

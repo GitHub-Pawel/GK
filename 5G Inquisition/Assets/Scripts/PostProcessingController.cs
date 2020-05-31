@@ -40,8 +40,9 @@ public class PostProcessingController : MonoBehaviour
                 vignette.color.value = Color.red;
                 if (vignette.intensity.value < .8f)
                 {
-                    vignette.intensity.value = playerStats.GetHealthLost()/100;
-                    //Debug.Log("Inceasing vignette to " + vignette.intensity.value);
+                    vignette.intensity.value = playerStats.GetHealthLost()/100f;
+                    Debug.Log("LOST HEALTH: "+playerStats.GetHealthLost());
+                    Debug.Log("Inceasing vignette to " + vignette.intensity.value);
                 }
             
             }

@@ -10,6 +10,7 @@ public class CharacterStats : MonoBehaviour
     public SceneSwitcher sceneSwitcher;
     public Stat damage;
     public Stat armor;
+    public Stat healing;
     public PostProcessingController postProcessingController;
 
     private void Start()
@@ -27,6 +28,7 @@ public class CharacterStats : MonoBehaviour
         healValue = Mathf.Clamp(healValue, 0, maxHealth-currentHealth);
         currentHealth += healValue;
     }
+    
     public void TakeDamage(int damage)
     {
         damage -= armor.GetValue();
