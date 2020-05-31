@@ -1,10 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerCanvasRotate : MonoBehaviour
 {
-    public Transform _target;
+    public GameObject player;
+    private Transform _target;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+        _target = player.transform;
+    }
 
     void Update()
     {

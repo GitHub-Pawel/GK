@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class ItemOnHover : MonoBehaviour
 {
     public string myText;
-    private bool isMouseOver;
     private GameObject textDisplay;
     private Text textField;
     private InventorySlot thisSlot;
@@ -24,7 +23,6 @@ public class ItemOnHover : MonoBehaviour
 
     public void OnMouseHoverOverButton()
     {
-        isMouseOver = true;
         Debug.Log("ON "+thisSlot.GetItemName());
         textField.text = thisSlot.GetItemName();
     }

@@ -82,6 +82,7 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerUI.cs" t="Include" />
+          <e p="PostProcessingController.cs" t="Include" />
           <e p="SceneSwitcher.cs" t="Include" />
           <e p="Stats" t="Include">
             <e p="CharacterStats.cs" t="Include" />

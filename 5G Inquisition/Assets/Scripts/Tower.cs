@@ -10,9 +10,13 @@ public class Tower : MonoBehaviour
     public TowerConfig config;
     private PlayerStats playerStats;
     public CanvasGroup canvasGroup;
+    
+    [SerializeField] public AudioClip towerAttackSound;
+    public AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         if (player == null)
         {
             player = FindObjectOfType<Player>();
@@ -29,6 +33,7 @@ public class Tower : MonoBehaviour
 
     public void canvasFader()
     {
+        
         canvasGroup.alpha = config.range - Vector3.Distance(player.transform.position, transform.position)*0.6f;
     }
 
@@ -36,8 +41,9 @@ public class Tower : MonoBehaviour
     {
         while(attacking)
         {
-            player.onTowerAttack(config.power);
+            //player.onTowerAttack(config.power);
             playerStats.TakeDamage((int)config.power);
+            audioSource.PlayOneShot(towerAttackSound);
             yield return new WaitForSeconds(config.attackIntervalSec);
         }
     }

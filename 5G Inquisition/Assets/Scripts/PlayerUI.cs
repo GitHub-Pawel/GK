@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
-    private Player player;
+    private PlayerStats playerStats;
     public Slider slider;
 
     void Start() {
-        player = GetComponent<Player>();
+        playerStats = GetComponent<PlayerStats>();
     }
     void Update()
     {
-        slider.value = player.health;        
+        slider.value = playerStats.currentHealth;        
     }
 }

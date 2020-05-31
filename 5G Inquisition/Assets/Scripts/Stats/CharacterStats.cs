@@ -1,14 +1,21 @@
 ﻿
 using System;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class CharacterStats : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth { get; private set; }
-    
+    public SceneSwitcher sceneSwitcher;
     public Stat damage;
     public Stat armor;
+    public PostProcessingController postProcessingController;
+
+    private void Start()
+    {
+        postProcessingController = GetComponent<PostProcessingController>();
+    }
 
     private void Awake()
     {
@@ -26,6 +33,7 @@ public class CharacterStats : MonoBehaviour
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         
         currentHealth -= damage;
+        postProcessingController.UpdatePostProcessing();
         Debug.Log(transform.name + " takes " + damage + " damage.");
 
         if (currentHealth <= 0)
@@ -35,8 +43,13 @@ public class CharacterStats : MonoBehaviour
 
         void Die()
         {
-            //Die
+            sceneSwitcher.GameOver();
             Debug.Log(transform.name + " died.");
         }
+    }
+
+    public int GetHealthLost()
+    {
+        return maxHealth - currentHealth;
     }
 }
