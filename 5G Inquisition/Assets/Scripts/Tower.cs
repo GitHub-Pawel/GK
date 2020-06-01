@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
     public TowerConfig config;
     private PlayerStats playerStats;
     public CanvasGroup canvasGroup;
-    
+
     [SerializeField] public AudioClip towerAttackSound;
     public AudioSource audioSource;
 

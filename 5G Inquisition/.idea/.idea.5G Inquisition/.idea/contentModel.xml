@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\D\AGH\VI\GK\Projekt_GryKomputerowe\GK\5G Inquisition" t="IncludeRecursive">
+    <e p="C:\Users\pawel\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\pawel\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_5G Inquisition.1266320429.00" t="ExcludeRecursive" />
+    <e p="C:\Users\pawel\Desktop\GK_tmp09\GK\5G Inquisition" t="IncludeRecursive">
       <e p="5G Inquisition.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -77,6 +79,7 @@
             <e p="ItemPickup.cs" t="Include" />
           </e>
           <e p="MouseLook.cs" t="Include" />
+          <e p="PhoneSignalRange.cs" t="Include" />
           <e p="piecesDespawner.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
@@ -116,7 +119,5 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\user\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\user\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_5G Inquisition.-1841921494.00" t="ExcludeRecursive" />
   </component>
 </project>
