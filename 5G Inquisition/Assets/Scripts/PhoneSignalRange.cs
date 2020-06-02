@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 public class PhoneSignalRange : MonoBehaviour
 {
     public TowerConfig config;
+    public bool destroyed;
     public Player player;
     public Image image;
     public Sprite signal_0;
@@ -15,7 +17,24 @@ public class PhoneSignalRange : MonoBehaviour
     public Sprite signal_4;
     public Sprite signal_5;
 
+    private void Start()
+    {
+        destroyed = false;
+    }
+
     void Update()
+    {
+        if (!destroyed)
+        {
+            updateRangeIcon();
+        }
+        else
+        {
+            image.overrideSprite = null;
+        }
+    }
+
+    public void updateRangeIcon()
     {
         if (Vector3.Distance(player.transform.position, transform.position) < config.range)
         {

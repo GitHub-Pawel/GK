@@ -12,6 +12,7 @@ public class Destructible : MonoBehaviour
     public float towerLifeLevel;
     public Player player;
     public PlayerAnimation playerAnimation;
+    public PhoneSignalRange phoneSignalRange;
 
     [SerializeField] private AudioClip towerBaseballHitSound;
     [SerializeField] public AudioClip towerCollapseSound;
@@ -44,7 +45,10 @@ public class Destructible : MonoBehaviour
         {
             HurtTheTower();
         }
-        else{
+        else
+        {
+            phoneSignalRange.destroyed = true;
+            phoneSignalRange.image.overrideSprite = null;
             Punch();
             DestroyDestructible();
             //Debug.Log(String.Format("Number of remaining towers: " + player.towerCounter)); //When tower is destroyed, destroyed version appears with NEW VERSION of this script, which doesn't have player or tower assigned and produces NULL EXCEPTIONS
