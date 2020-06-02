@@ -52,11 +52,11 @@ public class PhoneSignalRange : MonoBehaviour
         {
             image.overrideSprite = signal_2;
         }
-        else if (Vector3.Distance(player.transform.position, transform.position) < config.range*3)
+        else if (Vector3.Distance(player.transform.position, transform.position) < config.range*3.5)
         {
             image.overrideSprite = signal_1;
         }
-        else if (Vector3.Distance(player.transform.position, transform.position) < config.range*3.5)
+        else if (Vector3.Distance(player.transform.position, transform.position) < config.range*5)
         {
             image.overrideSprite = null;
         }

@@ -68,7 +68,7 @@ public class Destructible : MonoBehaviour
 
     private bool authToHit()
     {
-        if (Vector3.Distance(player.transform.position, tower.transform.position) < 10f)
+        if (Vector3.Distance(player.transform.position, tower.transform.position) < 11f)
             if (!playerAnimation.animator.GetCurrentAnimatorStateInfo(0).IsName("Baseball Hit"))
                 return true;
         return false;
