@@ -36,26 +36,7 @@ public class Player : MonoBehaviour
         
     }
     
-    private IEnumerator Heal()
-    {
-        while(healing)
-        {
-            // if (health <= startingHealth-5)
-            // {
-            //     health += 5f;
-            //     Debug.Log("Healed to "+health);
-            //     
-            // }
-            // else
-            // {
-            //     health = startingHealth;
-            //     Debug.Log("Healed to "+health);
-            // }
-            
-            yield return new WaitForSeconds(2f);
-
-        }
-    }
+   
 
     private void Update()
     {
@@ -112,15 +93,13 @@ public class Player : MonoBehaviour
     
     void RemoveFocus ()
     {
-        //if (focus != null)
-        //unequipFoilHat();
+        
         if (focus != null)
         {
             focus.OnDefocused();
         }
         focus = null;
         healing = false;
-        //ControlPostProcessingWeight();
 
         
     }

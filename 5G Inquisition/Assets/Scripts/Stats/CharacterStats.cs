@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class CharacterStats : MonoBehaviour
 {
     public int maxHealth = 100;
+    public int minimumHittingPower = 5;
     public int currentHealth { get; private set; }
     public SceneSwitcher sceneSwitcher;
     public Stat damage;
@@ -27,6 +28,8 @@ public class CharacterStats : MonoBehaviour
     {
         healValue = Mathf.Clamp(healValue, 0, maxHealth-currentHealth);
         currentHealth += healValue;
+        postProcessingController.UpdatePostProcessing();
+        Debug.Log("HEALED TO "+currentHealth);
     }
     
     public void TakeDamage(int damage)
@@ -48,6 +51,13 @@ public class CharacterStats : MonoBehaviour
             sceneSwitcher.GameOver();
             Debug.Log(transform.name + " died.");
         }
+    }
+
+    public int Hit()
+    {
+        var currentHitPower = minimumHittingPower + damage.GetValue();
+        Debug.Log("HITTING WITH POWER: "+currentHitPower);
+        return currentHitPower;
     }
 
     public int GetHealthLost()

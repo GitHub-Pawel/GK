@@ -17,4 +17,5 @@ MonoBehaviour:
   isDefaultItem: 0
   equipSlot: 2
   armorModifier: 8
-  damageModifier: 0
+  damageModifier: 2
+  healingModifier: 2

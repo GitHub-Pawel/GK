@@ -22,6 +22,7 @@ public class EquipmentManager : MonoBehaviour
 
     public OnEquipmentChanged onEquipmentChanged;
     public GameObject player;
+    public PlayerStats playerStats;
     public PostProcessingController postProcessingController;
     private Inventory inventory;
 
@@ -31,6 +32,7 @@ public class EquipmentManager : MonoBehaviour
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
         player = GameObject.Find("Player");
+        playerStats = player.GetComponent<PlayerStats>();
         postProcessingController = player.GetComponent<PostProcessingController>();
     }
 
@@ -49,6 +51,7 @@ public class EquipmentManager : MonoBehaviour
         if (onEquipmentChanged != null)
         {
             onEquipmentChanged.Invoke(newItem, oldItem);
+            playerStats.Heal(newItem.healingModifier);    //healing the player on equipping
         }
         
         currentEquipment[slotIndex] = newItem;
@@ -78,6 +81,7 @@ public class EquipmentManager : MonoBehaviour
         {
             Unequip(i);
         }
+        postProcessingController.UpdatePostProcessing();
     }
 
     void Update()
@@ -85,6 +89,7 @@ public class EquipmentManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             UnequipAll();
+            postProcessingController.UpdatePostProcessing();
         }
     }
 

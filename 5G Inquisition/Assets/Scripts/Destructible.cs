@@ -12,6 +12,8 @@ public class Destructible : MonoBehaviour
     public Tower tower;
     public float towerLifeLevel;
     public Player player;
+    public GameObject mainPlayer;
+    public PlayerStats playerStats;
     public PlayerAnimation playerAnimation;
     public PhoneSignalRange phoneSignalRange;
 
@@ -19,7 +21,11 @@ public class Destructible : MonoBehaviour
     [SerializeField] public AudioClip towerCollapseSound;
     public AudioSource audioSource;
 
-    void Start() {
+    void Start()
+    {
+        mainPlayer = GameObject.Find("Player");
+        playerStats = mainPlayer.GetComponent<PlayerStats>();
+        
         if (destroyedVersion)
         {
             if (!gameObject.name.Contains("(Clone)"))
@@ -60,7 +66,7 @@ public class Destructible : MonoBehaviour
     {
         if (authToHit())
         {
-            towerLifeLevel -= 15;
+            towerLifeLevel -= playerStats.Hit();
             audioSource.PlayOneShot(towerBaseballHitSound);
             Debug.Log(String.Format("Tower life level decremented: " + towerLifeLevel));
         }

@@ -41,7 +41,6 @@ public class Tower : MonoBehaviour
     {
         while(attacking)
         {
-            //player.onTowerAttack(config.power);
             playerStats.TakeDamage((int)config.power);
             audioSource.PlayOneShot(towerAttackSound);
             yield return new WaitForSeconds(config.attackIntervalSec);

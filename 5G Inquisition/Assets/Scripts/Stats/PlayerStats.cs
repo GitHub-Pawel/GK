@@ -22,7 +22,7 @@ public class PlayerStats : CharacterStats
         {
             armor.RemoveModifier(oldItem.armorModifier);
             damage.RemoveModifier(oldItem.damageModifier);
-            healing.AddModifier(newItem.healingModifier);
+            healing.RemoveModifier(oldItem.healingModifier);
         }
     }
 }

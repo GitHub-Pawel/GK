@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Spinning : MonoBehaviour
 {
-    public int SpinSpeed = 1;
+    public float SpinSpeedY = 1;
+    public float SpinSpeedX = 0;
+    public float SpinSpeedZ = 0;
 
     private Transform transform;
     // Start is called before the first frame update
@@ -18,8 +20,9 @@ public class Spinning : MonoBehaviour
     void Update()
     {
         var rotationVector = transform.rotation.eulerAngles;
-        rotationVector.y += SpinSpeed;
+        rotationVector.y += SpinSpeedY;
+        rotationVector.x += SpinSpeedX;
+        rotationVector.z += SpinSpeedZ;
         transform.rotation = Quaternion.Euler(rotationVector);
-        //transform.rotation = Quaternion.Euler(0,0, 1);
     }
 }
