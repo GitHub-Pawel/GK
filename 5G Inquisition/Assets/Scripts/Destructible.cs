@@ -7,6 +7,7 @@ public class Destructible : MonoBehaviour
 {
     public GameObject destroyedVersion;
     private GameObject clone;
+    private Destructible cloneScript;
 
     public Tower tower;
     public float towerLifeLevel;
@@ -84,7 +85,8 @@ public class Destructible : MonoBehaviour
                 Debug.Log(gameObject.tag);
                 var transformInfo = gameObject.transform;
                 clone = Instantiate(destroyedVersion, transformInfo.position, transformInfo.rotation);
-                audioSource.PlayOneShot(towerCollapseSound); // nie dziala bo obiekt jest usuwany
+                cloneScript = clone.GetComponent<Destructible>();
+                cloneScript.PlayDestroySound();
                 Destroy(gameObject);
                 player.towerCounter--;    //TODO make player.towerCounter attribute as private + use getter/setter
             }
@@ -92,6 +94,11 @@ public class Destructible : MonoBehaviour
         }
     }
 
+    public void PlayDestroySound()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(towerCollapseSound);
+    }
 
     
 }

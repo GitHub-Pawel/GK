@@ -126,6 +126,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &5446789832080605782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +159,7 @@ GameObject:
   - component: {fileID: 1661238114231107917}
   - component: {fileID: 6609767936155118974}
   - component: {fileID: 2900970071191584730}
+  - component: {fileID: -3192165137898684154}
   m_Layer: 0
   m_Name: 5Gtower_Cut
   m_TagString: Untagged
@@ -193,6 +202,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 8300000, guid: d44e58cbd34f915439fe79eb34463883, type: 3}
+  audioSource: {fileID: 0}
 --- !u!114 &2900970071191584730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +224,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 10
   fadeSpeed: 1
+--- !u!82 &-3192165137898684154
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402317026485023582}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3116237380638893295
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +446,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &7002269094995897765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +594,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &7367319152214792210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +742,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &5781960459420640368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,6 +890,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &2399488835876694819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,6 +1038,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &7203204264446854022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1033,6 +1186,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &2818512453163584114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,6 +1334,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 0}
+  tower: {fileID: 0}
+  towerLifeLevel: 0
+  player: {fileID: 0}
+  playerAnimation: {fileID: 0}
+  phoneSignalRange: {fileID: 0}
+  towerBaseballHitSound: {fileID: 0}
+  towerCollapseSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &1234934865395632435
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,14 +15,10 @@ public class Grenade : MonoBehaviour
 
     [SerializeField] GameObject exploParticle;
 
-    [SerializeField] public AudioClip grenadeExplosionSound;
-    public AudioSource audioSource;
-
     // Start is called before the first frame update
     void Start()
     {
         countdown = timer;
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,7 +38,6 @@ public class Grenade : MonoBehaviour
         GameObject spawnedParticle = Instantiate(exploParticle, transform.position, transform.rotation);
         Destroy(spawnedParticle, 1);
 
-        audioSource.PlayOneShot(grenadeExplosionSound);
         Collider [] collidersToDeatroy = Physics.OverlapSphere(transform.position, radius);
 
         foreach (Collider nearbyObject in collidersToDeatroy)
