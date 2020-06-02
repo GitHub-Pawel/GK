@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5766467935632592295}
   - component: {fileID: 232521842970358110}
   - component: {fileID: 5990619769731520892}
+  - component: {fileID: 1572715362}
+  - component: {fileID: 3802820520071855647}
   m_Layer: 0
   m_Name: HomeopathyFlaskRage
   m_TagString: Untagged
@@ -95,3 +97,30 @@ CapsuleCollider:
   m_Height: 0.09
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.02640893}
+--- !u!114 &1572715362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947458770012882306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9cb57906300e44cae1992edbaaf1c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  item: {fileID: 11400000, guid: 7543309f50f4a6a42a22c3dab664ae1f, type: 2}
+--- !u!114 &3802820520071855647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947458770012882306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ec65d02223b0844859e510f5231b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpinSpeed: 2
