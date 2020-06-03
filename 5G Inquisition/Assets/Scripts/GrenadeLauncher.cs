@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,11 +16,14 @@ public class GrenadeLauncher : MonoBehaviour
     {
         //if (Input.GetKeyDown(KeyCode.G))
         if (Input.GetMouseButtonDown(1) && !playerAnimation.animator.GetCurrentAnimatorStateInfo(0).IsName("Grenade Throw"))
-            Launch();
+            if (!GameObject.Find("WPN_MK2Grenade(Clone)"))
+                Launch();
     }
 
-    private void Launch()
+    public void Launch()
     {
+        playerAnimation.animator.SetTrigger("GrenadeThrow");
+        playerAnimation.audioSource.PlayOneShot(playerAnimation.grenadeThrowSound);
         GameObject grenadeInstance = Instantiate(grenade, spawnPoint.position, spawnPoint.rotation) as GameObject;
         grenadeInstance.GetComponent<Rigidbody>().AddForce(spawnPoint.forward*throwForce, ForceMode.Impulse);
     }

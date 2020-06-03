@@ -18,7 +18,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void Update() {
         playAttackAnimation();
-        playGrenadeAnimation();
+        //playGrenadeAnimation();
         playWalkAnimation();
     }
 
@@ -29,12 +29,14 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
     
+    /*
     public void playGrenadeAnimation() {
         if (Input.GetMouseButtonDown(1) && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Grenade Throw")) {
             animator.SetTrigger("GrenadeThrow");
             audioSource.PlayOneShot(grenadeThrowSound);
         }
     }
+    */
 
     public void playWalkAnimation() {
         if(Input.GetButton("Horizontal") || Input.GetButton("Vertical")) {
