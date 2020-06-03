@@ -106,5 +106,9 @@ public class Destructible : MonoBehaviour
         audioSource.PlayOneShot(towerCollapseSound);
     }
 
+    public void OnGrenadeExplosion()
+    {
+        towerLifeLevel -= 50;
+    }
     
 }

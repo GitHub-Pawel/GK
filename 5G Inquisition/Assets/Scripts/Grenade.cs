@@ -45,7 +45,11 @@ public class Grenade : MonoBehaviour
             Destructible dest = nearbyObject.GetComponent<Destructible>();
             if (dest != null)
             {
-                dest.DestroyDestructible();
+                dest.OnGrenadeExplosion();
+                if (dest.towerLifeLevel <= 0)
+                {
+                    dest.DestroyDestructible();
+                }
             }
         }
         
