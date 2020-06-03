@@ -16,6 +16,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 9f104a2ff97cce0489d0aaee511d1df0, type: 3}
   isDefaultItem: 0
   equipSlot: 2
-  armorModifier: 8
+  armorModifier: 7
   damageModifier: 3
-  healingModifier: 3
+  healingModifier: 1

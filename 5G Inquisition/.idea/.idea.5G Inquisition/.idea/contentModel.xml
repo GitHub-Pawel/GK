@@ -11,8 +11,6 @@
             <e p="Documentation.txt" t="Include" />
           </e>
         </e>
-        <e p="EquipmentManager.cs" t="Include" />
-        <e p="Healing.cs" t="Include" />
         <e p="NatureManufacture Assets - Trials Not Full Resolution" t="Include">
           <e p="EasyRoads-HD_Add_ON" t="Include">
             <e p="Shaders" t="Include">
@@ -63,8 +61,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Destructible.cs" t="Include" />
+          <e p="EquipmentManager.cs" t="Include" />
           <e p="Grenade.cs" t="Include" />
           <e p="GrenadeLauncher.cs" t="Include" />
+          <e p="Healing.cs" t="Include" />
           <e p="Interactible.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="Inventory.cs" t="Include" />
@@ -92,12 +92,12 @@
             <e p="PlayerStats.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
           </e>
+          <e p="StatsDisplayer.cs" t="Include" />
           <e p="Tower.cs" t="Include" />
           <e p="TowerCanvasRotate.cs" t="Include" />
           <e p="TowerConfig.cs" t="Include" />
           <e p="TowerUI.cs" t="Include" />
         </e>
-        <e p="StatsDisplayer.cs" t="Include" />
         <e p="Windridge City Assets" t="Include">
           <e p="CTS Trial" t="Include">
             <e p="Shaders" t="Include">
